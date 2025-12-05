@@ -2,6 +2,7 @@ import { Project, Experience, Education, Certification, SkillCategory, SectionId
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const RESUME_URL = "https://drive.google.com/file/d/1D3gz5a6mBTAQ5znqD6-tNWnf7cqzjrjS/view?usp=drive_link";
+// Using the Google Drive direct download link format
 export const RESUME_DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1D3gz5a6mBTAQ5znqD6-tNWnf7cqzjrjS";
 
 export const PROFILE = {
@@ -13,7 +14,7 @@ export const PROFILE = {
   socials: [
     { name: 'LinkedIn', url: 'https://linkedin.com/in/souravpatra07', icon: Linkedin },
     { name: 'GitHub', url: 'https://github.com/Sourav-glitch-ctrl', icon: Github },
-    { name: 'Email', url: 'mailto:souravpatra9976@gmail.com', icon: Mail },
+    { name: 'Email', url: 'https://mail.google.com/mail/?view=cm&fs=1&to=souravpatra9976@gmail.com', icon: Mail },
   ],
   summary: "Data Science and Machine Learning enthusiast pursuing B.E. in Electronics and Telecommunication Engineering. Skilled in Python, TensorFlow, Scikit-learn, and SQL with a strong foundation in statistics, algorithms, and data preprocessing. Passionate about applying analytical thinking and model optimization to real-world problems.",
   technicalSummary: "Machine Learning • Data Science • Python • TensorFlow • PyTorch • SQL • Data Visualization • Feature Engineering • Model Evaluation"

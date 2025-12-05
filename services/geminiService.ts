@@ -1,7 +1,8 @@
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 import { PROFILE, EXPERIENCE, PROJECTS, SKILL_CATEGORIES, EDUCATION, CERTIFICATIONS } from '../constants';
 
-const API_KEY = process.env.API_KEY || '';
+// Safely access API_KEY to prevent "process is not defined" errors in browser
+const API_KEY = (typeof process !== 'undefined' && process.env && process.env.API_KEY) ? process.env.API_KEY : '';
 
 const systemInstruction = `
 You are an AI assistant for Sourav Patra's portfolio website. 

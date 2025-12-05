@@ -18,12 +18,15 @@ const Skills: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Chart Section */}
-          <div className="bg-black/40 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-800 h-[400px] flex items-center justify-center relative group">
+          <div className="bg-black/40 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-800 h-[400px] flex items-center justify-center relative group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <ResponsiveContainer width="100%" height="100%">
-              <RadarChart cx="50%" cy="50%" outerRadius="70%" data={SKILL_CHART_DATA}>
+              <RadarChart cx="50%" cy="50%" outerRadius="65%" data={SKILL_CHART_DATA}>
                 <PolarGrid stroke="#1e293b" />
-                <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 12 }} />
+                <PolarAngleAxis 
+                  dataKey="subject" 
+                  tick={{ fill: '#94a3b8', fontSize: 13, fontWeight: 500 }} 
+                />
                 <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
                 <Radar
                   name="Proficiency"
@@ -31,7 +34,7 @@ const Skills: React.FC = () => {
                   stroke="#0ea5e9"
                   strokeWidth={3}
                   fill="#0ea5e9"
-                  fillOpacity={0.2}
+                  fillOpacity={0.3}
                 />
                 <Tooltip 
                   contentStyle={{ 
@@ -41,6 +44,7 @@ const Skills: React.FC = () => {
                     boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.5)' 
                   }}
                   itemStyle={{ color: '#e2e8f0', fontWeight: 600 }}
+                  formatter={(value: number) => [`${value}%`, 'Proficiency']}
                 />
               </RadarChart>
             </ResponsiveContainer>

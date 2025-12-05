@@ -76,7 +76,14 @@ const ResumeViewer: React.FC<ResumeViewerProps> = ({ isOpen, onClose, autoPrint 
           <div className="flex flex-wrap justify-center items-center gap-x-3 text-[10pt] text-gray-800 mb-1">
             <span className="flex items-center gap-1"><MapPin size={12} strokeWidth={2.5} /> {PROFILE.location}</span>
             <span className="text-gray-400">|</span>
-            <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-1 hover:text-sky-700"><Mail size={12} strokeWidth={2.5} /> {PROFILE.email}</a>
+            <a 
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PROFILE.email}`} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center gap-1 hover:text-sky-700"
+            >
+              <Mail size={12} strokeWidth={2.5} /> {PROFILE.email}
+            </a>
             <span className="text-gray-400">|</span>
             <span className="flex items-center gap-1"><Phone size={12} strokeWidth={2.5} /> {PROFILE.phone}</span>
           </div>

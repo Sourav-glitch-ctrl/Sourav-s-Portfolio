@@ -18,7 +18,14 @@ const Contact: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 group-hover:text-sky-500 group-hover:border-sky-500/30 transition-all">
                   <Mail size={18} />
                 </div>
-                <a href={`mailto:${PROFILE.email}`} className="text-slate-400 hover:text-white transition-colors">{PROFILE.email}</a>
+                <a 
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${PROFILE.email}`} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  {PROFILE.email}
+                </a>
               </div>
               <div className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 group-hover:text-sky-500 group-hover:border-sky-500/30 transition-all">
